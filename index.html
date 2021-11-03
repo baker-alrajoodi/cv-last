@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>your name</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="icon" href="b icon.png">
+
+
+    <!-- Demo styles -->
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: transparent;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      @media (max-width: 760px) {
+        .swiper-button-next {
+          right: 20px;
+          transform: rotate(90deg);
+        }
+
+        .swiper-button-prev {
+          left: 20px;
+          transform: rotate(90deg);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <div class="topnav" id="myTopnav">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About me</a>
+      <a href="#cv">my cv</a>
+      <a href="#contact">Contact</a>
+      <a
+        href="javascript:void(0);"
+        style="font-size: 15px"
+        class="icon"
+        onclick="myFunction()"
+        >&#9776;</a
+      >
+    </div>
+    <!-- /navbar -->
+
+    <!-- Swiper -->
+    
+      <div>
+        <h3 id="about">MOHAMED SALAH</h3>
+        <P style="width: 500PX; text-align: center; margin: 20PX AUTO; font-size: large; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; " >In my pursuit of new creative endeavors, I was excited to find the opportunity to apply for job with your company. As a progressive professional with staff management experience, I believe that I can bring valuable contributions to your team.</P>
+      </div>
+        <div>
+          <img src="4.jpg" alt="" style="width: 200px; border-radius: 100px;">
+        </div>
+    
+    
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="1.jpg" alt="rrr"></div>
+        <div class="swiper-slide"><img src="2.jfif" alt="rrr"></div>
+        <div class="swiper-slide"><img src="3.jpg" alt="rrr"></div>
+        <div class="swiper-slide"><img src="1.jpg" alt="rrr"></div>
+        <div class="swiper-slide"><img src="2.jfif" alt="rrr"></div>
+        <div class="swiper-slide"><img src="3.jpg" alt="rrr"></div>
+        <div class="swiper-slide"><img src="1.jpg" alt="rrr"></div>
+        <div class="swiper-slide"><img src="2.jfif" alt="rrr"></div>
+        <div class="swiper-slide"><img src="3.jpg" alt="rrr"></div>
+        <div class="swiper-slide"><img src="1.jpg" alt="rrr"></div>
+        <div class="swiper-slide"><img src="2.jfif" alt="rrr"></div>
+        <div class="swiper-slide"><img src="3.jpg" alt="rrr"></div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+    <!-- /Swiper -->
+
+    <!-- button download -->
+        <div id="cv" class="downloadcv1">Download CV</div>
+    <!-- /button download -->
+
+   
+
+
+
+<!-- footer -->
+<footer class="container-fluid bg-4 text-center">
+  <!-- social media link -->
+  <ul id="contact">
+    <li><i class="fab fa-facebook-f"></i></li>
+    <li><i class="fab fa-twitter"></i></li>
+    <li><i class="fab fa-instagram"></i></li>
+    <li><i class="fab fa-linkedin-in"></i></li>
+    <li><i class="fab fa-youtube"></i></li>
+  </ul>
+  <!-- /social media link -->
+
+  <p>
+    lwiss
+    <a href="https://www.brodservices.com" target="_blank"
+      >www.brodservices.com</a
+    >
+  </p>
+  <p>tel: 00123 - 123456789</p>
+  <p>we can add what you want here</p>
+</footer>
+<!-- /footer -->
+
+
+
+
+
+
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".swiper", {
+        slidesPerView: 3,
+        direction: getDirection(),
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        on: {
+          resize: function () {
+            swiper.changeDirection(getDirection());
+          },
+        },
+      });
+
+      function getDirection() {
+        var windowWidth = window.innerWidth;
+        var direction = window.innerWidth <= 760 ? "vertical" : "horizontal";
+
+        return direction;
+      }
+    </script>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
+  </body>
+</html>
